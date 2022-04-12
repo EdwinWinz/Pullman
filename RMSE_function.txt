@@ -1,0 +1,4 @@
+setwd("path/...")
+RMSE_DEM <- read.csv('MeasuredVsModeled_DEM_RMSE_Dataset.csv')
+RMSE <- sqrt(mean((RMSE_DEM$GNSS_Heigh - RMSE_DEM$DEM_1m_0.00)^2))
+print(RMSE) ## RMSE reported should be 0.04489708. This is meters.
